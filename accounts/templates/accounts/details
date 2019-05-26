@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tournament</title>
+</head>
+<body bgcolor="#ffef00" text="#003177">
+<h1>Enter the tournament details</h1>
+<form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Name of tournament</label>
+            <input type="text" name="name">
+        </p>
+        <p>
+            <label>Date of tournament</label>
+            <input type="text" name="date">
+        </p>
+        <p>
+            <label>Set number of rounds</label>
+            <input type="text" name="round">
+        </p>
+        <p>
+            <label>Set range of speaker's scores</label>
+            <input type="text" name="speakerscore">
+        </p>
+        <p>
+            <label>Set range of judge's scores</label>
+            <input type="text" name="judgescore">
+        </p>
+        <p>
+            <label>Set number of breaks</label>
+            <input type="text" name="round">
+        </p>
+        <button type="submit">CREATE TOURNAMENT</button>
+    </form>
+</body>
+</html>
