@@ -1,0 +1,34 @@
+
+{% extends 'bas_nav_lay.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD TEAM</title>
+</head>
+<body>
+<h1>Enter team details to add it to the tournament</h1>
+<p>
+    <label>Enter Team Name</label>
+    <input type="text" name="team">
+</p>
+<p>
+    <label>Enter Institution Name</label>
+    <input type="text" name="insti">
+</p>
+<p>
+    <label>Enter name of Participant 1</label>
+    <input type="text" name="part1">
+</p>
+<p>
+    <label>Enter name of Participant 2</label>
+    <input type="text" name="part2">
+</p>
+<button type="submit">SUBMIT DETAILS</button>
+</body>
+</html>
+
+{% endblock %}
