@@ -1,0 +1,25 @@
+{% extends 'bas_nav_lay.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD JUDGE</title>
+</head>
+<body>
+<h1>Enter details of the adjudicator</h1>
+<p>
+    <label>Enter Judge Name</label>
+    <input type="text" name="team">
+</p>
+<p>
+    <label>Enter Institution Name</label>
+    <input type="text" name="insti">
+</p>
+<button type="submit">SUBMIT DETAILS</button>
+</body>
+</html>
+
+{% endblock %}
