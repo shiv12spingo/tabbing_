@@ -1,0 +1,23 @@
+
+{% extends 'bas_nav_lay.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h3>{{ tournament.tournament_name }}</h3>
+    <h3>Date:{{ tournament.date }}</h3>
+    <h3>Speaker Score Range:{{ tournament.speaker_score_range }}</h3>
+    <h3>Adjudicator Score Range:{{ tournament.adjudicator_score_range }}</h3>
+    <h3>Number of Rounds:{{ tournament.number_of_rounds }}</h3>
+    <h3>Number of Break Rounds:{{ tournament.number_of_break_rounds }}</h3>
+    <h3>Venue:{{ tournament.tournament_venue }}</h3>
+</body>
+</html>
+
+{% endblock %}

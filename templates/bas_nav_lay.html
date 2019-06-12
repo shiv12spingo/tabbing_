@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static from staticfiles %}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous">
+</script>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<nav class="navbar navbar-inverse ">
+    <div class="container-fluid">
+
+        <!-- header -->
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/about/">Tabbing App</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavBar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/home/">Home</a></li>
+                <li class="active"><a href="/Participants/details/">ADD TEAM</a> </li>
+                <li><a href="#">STANDINGS</a> </li>
+                <li><a href="#">Motions</a> </li>
+                <li><a href="#">Rounds</a> </li>
+                <li><a href="#">Breaks</a> </li>
+                <li><a href="#">Break Rounds</a> </li>
+                <li class="active"><a href="/Judges/details/">ADD JUDGES</a> </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+                </li>
+                <li>
+                    <form class="navbar-form navbar-left" action="/accounts/login/" method="post">
+                        {% csrf_token %}
+                        <button type="submit">
+                            Logout
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<body>
+    <div class="wrapper">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
